@@ -1,0 +1,6 @@
+20:55:19 **** Incremental Build of configuration Debug for project LPC134x_Timer_Ex_2 ****
+make -r -j4 all 
+make: Nothing to be done for `all'.
+
+20:55:19 Build Finished (took 81ms)
+

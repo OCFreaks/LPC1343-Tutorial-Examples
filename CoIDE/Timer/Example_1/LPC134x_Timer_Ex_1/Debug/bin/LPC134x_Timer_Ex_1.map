@@ -1,0 +1,250 @@
+
+Discarded input sections
+
+ .text          0x00000000        0x0 ..\obj\system_LPC13xx.o
+ .bss           0x00000000        0x0 ..\obj\system_LPC13xx.o
+ .text          0x00000000        0x0 ..\obj\main.o
+ .data          0x00000000        0x0 ..\obj\main.o
+ .bss           0x00000000        0x0 ..\obj\main.o
+ .ARM.extab.text.main
+                0x00000000        0x0 ..\obj\main.o
+ .ARM.extab.text._Z10initTimer0v
+                0x00000000        0x0 ..\obj\main.o
+ .ARM.extab.text._Z7delayMSj
+                0x00000000        0x0 ..\obj\main.o
+ .text          0x00000000        0x0 ..\obj\startup_lpc13xx.o
+ .data          0x00000000        0x0 ..\obj\startup_lpc13xx.o
+ .bss           0x00000000        0x0 ..\obj\startup_lpc13xx.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x00000000         0x00008000         xr
+ram              0x10000000         0x00002000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x10002000                _eram = 0x10002000
+
+.text           0x00000000      0x5c4
+ *(.isr_vector)
+ .isr_vector    0x00000000      0x124 ..\obj\startup_lpc13xx.o
+                0x00000000                g_pfnVectors
+ *(.text*)
+ .text.SystemInit
+                0x00000124      0x37c ..\obj\system_LPC13xx.o
+                0x00000124                SystemInit
+ .text.main     0x000004a0       0x44 ..\obj\main.o
+                0x000004a0                main
+ .text._Z10initTimer0v
+                0x000004e4       0x3c ..\obj\main.o
+                0x000004e4                initTimer0()
+ .text._Z7delayMSj
+                0x00000520       0x40 ..\obj\main.o
+                0x00000520                delayMS(unsigned int)
+ .text.Default_Reset_Handler
+                0x00000560       0x5c ..\obj\startup_lpc13xx.o
+                0x00000560                Default_Reset_Handler
+                0x00000560                Reset_Handler
+ .text.Default_Handler
+                0x000005bc        0x8 ..\obj\startup_lpc13xx.o
+                0x000005bc                TIMER16_0_IRQHandler
+                0x000005bc                DebugMon_Handler
+                0x000005bc                HardFault_Handler
+                0x000005bc                SysTick_Handler
+                0x000005bc                PendSV_Handler
+                0x000005bc                NMI_Handler
+                0x000005bc                UART_IRQHandler
+                0x000005bc                TIMER32_0_IRQHandler
+                0x000005bc                TIMER32_1_IRQHandler
+                0x000005bc                UsageFault_Handler
+                0x000005bc                PIOINT1_IRQHandler
+                0x000005bc                SSP_IRQHandler
+                0x000005bc                TIMER16_1_IRQHandler
+                0x000005bc                USB_FIQHandler
+                0x000005bc                ADC_IRQHandler
+                0x000005bc                PIOINT2_IRQHandler
+                0x000005bc                USB_IRQHandler
+                0x000005bc                BOD_IRQHandler
+                0x000005bc                WAKEUP_IRQHandler
+                0x000005bc                PIOINT0_IRQHandler
+                0x000005bc                I2C_IRQHandler
+                0x000005bc                MemManage_Handler
+                0x000005bc                WDT_IRQHandler
+                0x000005bc                SVC_Handler
+                0x000005bc                PIOINT3_IRQHandler
+                0x000005bc                BusFault_Handler
+                0x000005bc                FMC_IRQHandler
+ *(.init)
+ *(.fini)
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+ *(.rodata*)
+ *(.eh_fram e*)
+
+.glue_7         0x000005c4        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x000005c4        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x000005c4        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x000005c4        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x000005c4        0x0
+ .iplt          0x00000000        0x0 ..\obj\system_LPC13xx.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x000005c4                __exidx_start = .
+
+.ARM.exidx      0x000005c4        0x8
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx.text.main
+                0x000005c4        0x8 ..\obj\main.o
+ .ARM.exidx.text._Z10initTimer0v
+                0x000005cc        0x0 ..\obj\main.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z7delayMSj
+                0x000005cc        0x0 ..\obj\main.o
+                                  0x8 (size before relaxing)
+                0x000005cc                __exidx_end = .
+                0x000005cc                __etext = .
+                0x000005cc                _sidata = __etext
+
+.rel.dyn        0x000005cc        0x0
+ .rel.iplt      0x00000000        0x0 ..\obj\system_LPC13xx.o
+
+.data           0x10000000        0x4 load address 0x000005cc
+                0x10000000                __data_start__ = .
+                0x10000000                _sdata = __data_start__
+ *(vtable)
+ *(.data*)
+ .data          0x10000000        0x4 ..\obj\system_LPC13xx.o
+                0x10000000                SystemFrequency
+                0x10000004                . = ALIGN (0x4)
+                0x10000004                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x10000004                PROVIDE (__preinit_array_end, .)
+                0x10000004                . = ALIGN (0x4)
+                0x10000004                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+                0x10000004                PROVIDE (__init_array_end, .)
+                0x10000004                . = ALIGN (0x4)
+                0x10000004                PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*))
+ *(.fini_array)
+                0x10000004                PROVIDE (__fini_array_end, .)
+ *(.jcr*)
+                0x10000004                . = ALIGN (0x4)
+                0x10000004                __data_end__ = .
+                0x10000004                _edata = __data_end__
+
+.igot.plt       0x10000004        0x0 load address 0x000005d0
+ .igot.plt      0x00000000        0x0 ..\obj\system_LPC13xx.o
+
+.bss            0x10000004        0x0
+                0x10000004                . = ALIGN (0x4)
+                0x10000004                __bss_start__ = .
+                0x10000004                _sbss = __bss_start__
+ *(.bss*)
+ *(COMMON)
+                0x10000004                . = ALIGN (0x4)
+                0x10000004                __bss_end__ = .
+                0x10000004                _ebss = __bss_end__
+
+.heap           0x10000004        0x0
+                0x10000004                __end__ = .
+                0x10000004                _end = __end__
+                0x10000004                end = __end__
+ *(.heap*)
+                0x10000004                __HeapLimit = .
+
+.co_stack       0x10000004      0x404 load address 0x000005d0
+                0x10000008                . = ALIGN (0x8)
+ *fill*         0x10000004        0x4 
+ *(.co_stack .co_stack.*)
+ .co_stack      0x10000008      0x400 ..\obj\startup_lpc13xx.o
+                0x10000008                pulStack
+                0x10002000                __StackTop = (ORIGIN (ram) + 0x2000)
+                0x10001bfc                __StackLimit = (__StackTop - SIZEOF (.co_stack))
+                0x10002000                PROVIDE (__stack, __StackTop)
+                0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region ram  overflowed with stack)
+LOAD ..\obj\system_LPC13xx.o
+LOAD ..\obj\main.o
+LOAD ..\obj\startup_lpc13xx.o
+START GROUP
+LOAD y:/gcc-arm-none-eabi-4_9-2014q4-20141203-win32/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a
+LOAD y:/gcc-arm-none-eabi-4_9-2014q4-20141203-win32/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg.a
+LOAD y:/gcc-arm-none-eabi-4_9-2014q4-20141203-win32/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libc.a
+END GROUP
+OUTPUT(LPC134x_Timer_Ex_1.elf elf32-littlearm)
+
+.debug_info     0x00000000      0xc4a
+ .debug_info    0x00000000      0x4a5 ..\obj\system_LPC13xx.o
+ .debug_info    0x000004a5      0x6bd ..\obj\main.o
+ .debug_info    0x00000b62       0xe8 ..\obj\startup_lpc13xx.o
+
+.debug_abbrev   0x00000000      0x30d
+ .debug_abbrev  0x00000000       0xda ..\obj\system_LPC13xx.o
+ .debug_abbrev  0x000000da      0x18c ..\obj\main.o
+ .debug_abbrev  0x00000266       0xa7 ..\obj\startup_lpc13xx.o
+
+.debug_aranges  0x00000000       0x78
+ .debug_aranges
+                0x00000000       0x20 ..\obj\system_LPC13xx.o
+ .debug_aranges
+                0x00000020       0x30 ..\obj\main.o
+ .debug_aranges
+                0x00000050       0x28 ..\obj\startup_lpc13xx.o
+
+.debug_ranges   0x00000000       0x48
+ .debug_ranges  0x00000000       0x10 ..\obj\system_LPC13xx.o
+ .debug_ranges  0x00000010       0x20 ..\obj\main.o
+ .debug_ranges  0x00000030       0x18 ..\obj\startup_lpc13xx.o
+
+.debug_line     0x00000000      0x4bf
+ .debug_line    0x00000000      0x219 ..\obj\system_LPC13xx.o
+ .debug_line    0x00000219      0x1fb ..\obj\main.o
+ .debug_line    0x00000414       0xab ..\obj\startup_lpc13xx.o
+
+.debug_str      0x00000000      0x622
+ .debug_str     0x00000000      0x417 ..\obj\system_LPC13xx.o
+                                0x46f (size before relaxing)
+ .debug_str     0x00000417      0x152 ..\obj\main.o
+                                0x4f4 (size before relaxing)
+ .debug_str     0x00000569       0xb9 ..\obj\startup_lpc13xx.o
+                                0x150 (size before relaxing)
+
+.comment        0x00000000       0x70
+ .comment       0x00000000       0x70 ..\obj\system_LPC13xx.o
+                                 0x71 (size before relaxing)
+ .comment       0x00000000       0x71 ..\obj\main.o
+ .comment       0x00000000       0x71 ..\obj\startup_lpc13xx.o
+
+.ARM.attributes
+                0x00000000       0x33
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\system_LPC13xx.o
+ .ARM.attributes
+                0x00000033       0x33 ..\obj\main.o
+ .ARM.attributes
+                0x00000066       0x33 ..\obj\startup_lpc13xx.o
+
+.debug_frame    0x00000000       0xf8
+ .debug_frame   0x00000000       0x38 ..\obj\system_LPC13xx.o
+ .debug_frame   0x00000038       0x74 ..\obj\main.o
+ .debug_frame   0x000000ac       0x4c ..\obj\startup_lpc13xx.o

@@ -1,0 +1,39 @@
+20:56:47 **** Build of configuration Debug for project LPC134x_Timer_Ex_3 ****
+make -r -j4 all 
+Building file: ../src/LPC134x_Timer_Ex_3.cpp
+Building file: ../src/cr_cpp_config.cpp
+Building file: ../src/cr_startup_lpc13xx.cpp
+Building file: ../src/crp.c
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC13xx -DCPP_USE_HEAP -D__LPC13XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\Timer\CMSIS_CORE_LPC13xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/LPC134x_Timer_Ex_3.d" -MT"src/LPC134x_Timer_Ex_3.o" -MT"src/LPC134x_Timer_Ex_3.d" -o "src/LPC134x_Timer_Ex_3.o" "../src/LPC134x_Timer_Ex_3.cpp"
+Invoking: MCU C++ Compiler
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC13xx -DCPP_USE_HEAP -D__LPC13XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\Timer\CMSIS_CORE_LPC13xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/cr_startup_lpc13xx.d" -MT"src/cr_startup_lpc13xx.o" -MT"src/cr_startup_lpc13xx.d" -o "src/cr_startup_lpc13xx.o" "../src/cr_startup_lpc13xx.cpp"
+Invoking: MCU C Compiler
+Invoking: MCU C++ Compiler
+arm-none-eabi-gcc -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC13xx -DCPP_USE_HEAP -D__LPC13XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\Timer\CMSIS_CORE_LPC13xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+arm-none-eabi-c++ -D__NEWLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC13xx -DCPP_USE_HEAP -D__LPC13XX__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\Timer\CMSIS_CORE_LPC13xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/cr_cpp_config.d" -MT"src/cr_cpp_config.o" -MT"src/cr_cpp_config.d" -o "src/cr_cpp_config.o" "../src/cr_cpp_config.cpp"
+Finished building: ../src/crp.c
+Finished building: ../src/cr_startup_lpc13xx.cpp
+Finished building: ../src/LPC134x_Timer_Ex_3.cpp
+ 
+ 
+ 
+Finished building: ../src/cr_cpp_config.cpp
+ 
+Building target: LPC134x_Timer_Ex_3.axf
+Invoking: MCU C++ Linker
+arm-none-eabi-c++ -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\Timer\CMSIS_CORE_LPC13xx\Debug" -Xlinker -Map="LPC134x_Timer_Ex_3.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "LPC134x_Timer_Ex_3_Debug.ld" -o "LPC134x_Timer_Ex_3.axf"  ./src/LPC134x_Timer_Ex_3.o ./src/cr_cpp_config.o ./src/cr_startup_lpc13xx.o ./src/crp.o   -lCMSIS_CORE_LPC13xx
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:        1380 B        32 KB      4.21%
+         RamLoc8:          28 B         8 KB      0.34%
+Finished building target: LPC134x_Timer_Ex_3.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "LPC134x_Timer_Ex_3.axf"; # arm-none-eabi-objcopy -v -O binary "LPC134x_Timer_Ex_3.axf" "LPC134x_Timer_Ex_3.bin" ; # checksum -p LPC1343 -d "LPC134x_Timer_Ex_3.bin";
+   text	   data	    bss	    dec	    hex	filename
+   1380	      0	     28	   1408	    580	LPC134x_Timer_Ex_3.axf
+ 
+
+20:56:48 Build Finished (took 567ms)
+

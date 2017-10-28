@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+	<configuration id="com.crt.advproject.config.exe.debug.2094147528" name="Debug">
+		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
+			<provider id="com.crt.advproject.GCCBuildCommandParser">
+				<language id="org.eclipse.cdt.core.g++">
+					<resource project-relative-path="src/LPC134x_Timer_Ex_1.cpp">
+						<entry kind="includePath" name="/CMSIS_CORE_LPC13xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value=""/>
+						<entry kind="macro" name="CPP_USE_HEAP" value=""/>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__LPC13XX__" value=""/>
+						<entry kind="macro" name="__NEWLIB__" value=""/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC13xx"/>
+					</resource>
+					<resource project-relative-path="src/cr_startup_lpc13xx.cpp">
+						<entry kind="includePath" name="/CMSIS_CORE_LPC13xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value=""/>
+						<entry kind="macro" name="CPP_USE_HEAP" value=""/>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__LPC13XX__" value=""/>
+						<entry kind="macro" name="__NEWLIB__" value=""/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC13xx"/>
+					</resource>
+					<resource project-relative-path="src/cr_cpp_config.cpp">
+						<entry kind="includePath" name="/CMSIS_CORE_LPC13xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value=""/>
+						<entry kind="macro" name="CPP_USE_HEAP" value=""/>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__LPC13XX__" value=""/>
+						<entry kind="macro" name="__NEWLIB__" value=""/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC13xx"/>
+					</resource>
+				</language>
+				<language id="org.eclipse.cdt.core.gcc">
+					<resource project-relative-path="src/crp.c">
+						<entry kind="includePath" name="/CMSIS_CORE_LPC13xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M3" value=""/>
+						<entry kind="macro" name="CPP_USE_HEAP" value=""/>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__LPC13XX__" value=""/>
+						<entry kind="macro" name="__NEWLIB__" value=""/>
+						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC13xx"/>
+					</resource>
+				</language>
+			</provider>
+		</extension>
+	</configuration>
+</project>
