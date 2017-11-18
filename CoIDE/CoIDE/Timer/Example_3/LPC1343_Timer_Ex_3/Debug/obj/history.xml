@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc 6.2.0 x86_64-w64-mingw32 -mcpu=cortex-m3 -mthumb -Wall -ffunction-sections -g -O0 -c -DLPC1343 -IY:\LPC1343-Tutorial-Examples\CoIDE\Timer\Example_3\cmsis_boot -IY:\LPC1343-Tutorial-Examples\CoIDE\Timer\Example_3 -IY:\LPC1343-Tutorial-Examples\CoIDE\Timer\Example_3\cmsis -IY:\LPC1343-Tutorial-Examples\CoIDE\Timer">
+      <target file="startup_lpc13xx.o" lastModified="15e9ab3fb9b">
+         <source file="..\..\..\cmsis_boot\startup\startup_lpc13xx.c" lastModified="15e9ab2ffd9"/>
+      </target>
+      <target file="main.o" lastModified="15e9ab3fb65">
+         <source file="..\..\..\main.cpp" lastModified="15e9ab3ea16"/>
+      </target>
+      <target file="system_LPC13xx.o" lastModified="15e9ab3fb1e">
+         <source file="..\..\..\cmsis_boot\system_LPC13xx.c" lastModified="15e9ab2ffda"/>
+      </target>
+   </processor>
+</history>

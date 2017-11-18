@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dependencies>
+   <includePath signature="/IY:\LPC1343-Tutorial-Examples\CoIDE\PWM\Example_2\cmsis_boot /IY:\LPC1343-Tutorial-Examples\CoIDE\PWM\Example_2 /IY:\LPC1343-Tutorial-Examples\CoIDE\PWM /IY:\LPC1343-Tutorial-Examples\CoIDE\PWM\Example_2\cmsis">
+      <source file="..\..\..\cmsis_boot\startup\startup_lpc13xx.c" lastModified="15ea8a4391c">
+      </source>
+      <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="15ea8a440fe">
+      </source>
+      <source file="..\..\..\cmsis_boot\system_LPC13xx.h" lastModified="15ea8a4391d">
+      </source>
+      <source file="..\..\..\cmsis_boot\LPC13xx.h" lastModified="15ea8a4391b">
+         <include file="..\..\..\cmsis\core_cm3.h"/>
+         <include file="..\..\..\cmsis_boot\system_LPC13xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis\core_cmFunc.h" lastModified="15ea8a440fd">
+      </source>
+      <source file="..\..\..\cmsis_boot\system_LPC13xx.c" lastModified="15ea8a43d04">
+         <include file="..\..\..\cmsis_boot\LPC13xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis\core_cm3.h" lastModified="15ea8a43d14">
+         <include file="..\..\..\cmsis\core_cmInstr.h"/>
+         <include file="..\..\..\cmsis\core_cmFunc.h"/>
+      </source>
+   </includePath>
+</dependencies>

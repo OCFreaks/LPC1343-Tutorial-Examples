@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dependencies>
+   <includePath signature="/IY:\LPC1343-Tutorial-Examples\CoIDE\UART /IY:\LPC1343-Tutorial-Examples\CoIDE\UART\Example_1\cmsis /IY:\LPC1343-Tutorial-Examples\CoIDE\UART\Example_1\cmsis_boot /IY:\LPC1343-Tutorial-Examples\CoIDE\UART\Example_1">
+      <source file="..\..\..\cmsis_boot\startup\startup_lpc13xx.c" lastModified="15ec4821fe7">
+      </source>
+      <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="15ec48227c6">
+      </source>
+      <source file="..\..\..\cmsis_boot\system_LPC13xx.h" lastModified="15ec4821fe9">
+      </source>
+      <source file="..\..\..\cmsis_boot\LPC13xx.h" lastModified="15ec4821fc4">
+         <include file="..\..\..\cmsis\core_cm3.h"/>
+         <include file="..\..\..\cmsis_boot\system_LPC13xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis\core_cmFunc.h" lastModified="15ec48227c5">
+      </source>
+      <source file="..\..\..\cmsis_boot\system_LPC13xx.c" lastModified="15ec48223d0">
+         <include file="..\..\..\cmsis_boot\LPC13xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis\core_cm3.h" lastModified="15ec48223dc">
+         <include file="..\..\..\cmsis\core_cmInstr.h"/>
+         <include file="..\..\..\cmsis\core_cmFunc.h"/>
+      </source>
+   </includePath>
+</dependencies>

@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+editor.color.default=249,249,249
+editor.color.procInstr=249,249,249
+editor.color.string=118,186,83
+editor.color.tag=249,249,249
+editor.color.xmlComment=168,168,168
+overriddenByCSS=,editor.color.string,editor.color.tag,editor.color.default,editor.color.procInstr,editor.color.xmlComment,
+predarkestdark.editor.color.default=249,249,249
+predarkestdark.editor.color.procInstr=249,249,249
+predarkestdark.editor.color.string=118,186,83
+predarkestdark.editor.color.tag=249,249,249
+predarkestdark.editor.color.xmlComment=168,168,168

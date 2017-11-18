@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -g -nostartfiles -Map=LPC1343_Timer_Ex_3.map -O0 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\LPC1343_Timer_Ex_3 -TC:\CooCox\CoIDE\configuration\ProgramData\LPC1343_Timer_Ex_3/arm-gcc-link.ld -g">
+      <target file="LPC1343_Timer_Ex_3.elf" lastModified="15e9ab3fd64">
+         <source file="..\obj\system_LPC13xx.o" lastModified="15e9ab3fb1e"/>
+         <source file="..\obj\main.o" lastModified="15e9ab3fb65"/>
+         <source file="..\obj\startup_lpc13xx.o" lastModified="15e9ab3fb9b"/>
+      </target>
+   </processor>
+</history>

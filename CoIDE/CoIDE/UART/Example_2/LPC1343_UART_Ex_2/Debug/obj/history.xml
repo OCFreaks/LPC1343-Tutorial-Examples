@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc 6.2.0 x86_64-w64-mingw32 -mcpu=cortex-m3 -mthumb -Wall -ffunction-sections -g -O0 -c -DLPC1343 -IY:\LPC1343-Tutorial-Examples\CoIDE\UART -IY:\LPC1343-Tutorial-Examples\CoIDE\UART\Example_2\cmsis_boot -IY:\LPC1343-Tutorial-Examples\CoIDE\UART\Example_2\cmsis -IY:\LPC1343-Tutorial-Examples\CoIDE\UART\Example_2">
+      <target file="startup_lpc13xx.o" lastModified="15ec49e1040">
+         <source file="..\..\..\cmsis_boot\startup\startup_lpc13xx.c" lastModified="15ec49aab4c"/>
+      </target>
+      <target file="main.o" lastModified="15fbf7fb824">
+         <source file="..\..\..\main.c" lastModified="15fbf7faa70"/>
+      </target>
+      <target file="system_LPC13xx.o" lastModified="15ec49e0ff1">
+         <source file="..\..\..\cmsis_boot\system_LPC13xx.c" lastModified="15ec49aab4d"/>
+      </target>
+   </processor>
+</history>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="installedFeatures">
+		<item value="com.crt.lpcxpresso.feature.product:10.0.0.201707111000"/>
+		<item value="com.crt.lpcxpresso.feature:10.0.0.201707111000"/>
+		<item value="org.eclipse.cdt.debug.gdbjtag:9.1.0.201609121658"/>
+		<item value="org.eclipse.cdt.gdb:9.1.0.201609121658"/>
+		<item value="org.eclipse.cdt:9.1.0.201609121658"/>
+		<item value="org.eclipse.cvs:1.4.302.v20170301-0400"/>
+		<item value="org.eclipse.draw2d:3.10.100.201606061308"/>
+		<item value="org.eclipse.egit:4.6.1.201703071140-r"/>
+		<item value="org.eclipse.emf.common:2.12.0.v20160420-0247"/>
+		<item value="org.eclipse.emf.ecore:2.12.0.v20160420-0247"/>
+		<item value="org.eclipse.epp.mpc:1.5.4.v20170222-1941"/>
+		<item value="org.eclipse.gef:3.11.0.201606061308"/>
+		<item value="org.eclipse.help:2.2.2.v20170301-0400"/>
+		<item value="org.eclipse.jgit:4.6.1.201703071140-r"/>
+		<item value="org.eclipse.platform:4.6.3.v20170301-0400"/>
+		<item value="org.eclipse.rcp:4.6.3.v20170301-0400"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+	</section>
+</section>

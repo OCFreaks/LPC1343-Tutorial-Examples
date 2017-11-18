@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -g -nostartfiles -Map=LPC1343_UART_Ex_1.map -O0 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\LPC1343_UART_Ex_1 -TC:\CooCox\CoIDE\configuration\ProgramData\LPC1343_UART_Ex_1/arm-gcc-link.ld -g">
+      <target file="LPC1343_UART_Ex_1.elf" lastModified="15fbf63ae4b">
+         <source file="..\obj\system_LPC13xx.o" lastModified="15ec491c527"/>
+         <source file="..\obj\main.o" lastModified="15fbf63ac0d"/>
+         <source file="..\obj\startup_lpc13xx.o" lastModified="15ec491c57e"/>
+      </target>
+   </processor>
+</history>
