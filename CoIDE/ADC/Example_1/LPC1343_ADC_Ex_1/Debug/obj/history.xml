@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc 6.2.0 x86_64-w64-mingw32 -mcpu=cortex-m3 -mthumb -Wall -ffunction-sections -g -O0 -c -DLPC1343 -IY:\LPC1343-Tutorial-Examples\CoIDE\ADC\Example_1 -IY:\LPC1343-Tutorial-Examples\CoIDE\ADC\Example_1\cmsis -IY:\LPC1343-Tutorial-Examples\CoIDE -IY:\LPC1343-Tutorial-Examples\CoIDE\ADC -IY:\LPC1343-Tutorial-Examples\CoIDE\ADC\Example_1\cmsis_boot">
+      <target file="startup_lpc13xx.o" lastModified="15fc090cb5b">
+         <source file="..\..\..\cmsis_boot\startup\startup_lpc13xx.c" lastModified="15fbee48b6a"/>
+      </target>
+      <target file="ocf_lpc134x_lib.o" lastModified="15fca16c690">
+         <source file="..\..\..\ocf_lpc134x_lib.c" lastModified="15fca16bb68"/>
+      </target>
+      <target file="printf.o" lastModified="15fc090cb10">
+         <source file="..\..\..\stdio\printf.c" lastModified="15fc0887288"/>
+      </target>
+      <target file="main.o" lastModified="15fcec86ef6">
+         <source file="..\..\..\main.c" lastModified="15fcec868f9"/>
+      </target>
+      <target file="system_LPC13xx.o" lastModified="15fc090ca83">
+         <source file="..\..\..\cmsis_boot\system_LPC13xx.c" lastModified="15fbee48b6b"/>
+      </target>
+   </processor>
+</history>

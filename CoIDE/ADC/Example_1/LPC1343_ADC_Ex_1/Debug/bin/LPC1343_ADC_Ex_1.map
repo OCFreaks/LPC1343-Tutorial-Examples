@@ -1,0 +1,362 @@
+Archive member included to satisfy reference by file (symbol)
+
+y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubdf3.o)
+                              ..\obj\main.o (__aeabi_ui2d)
+y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivdf3.o)
+                              ..\obj\main.o (__aeabi_dmul)
+y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixdfsi.o)
+                              ..\obj\main.o (__aeabi_d2iz)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 ..\obj\ocf_lpc134x_lib.o
+ .data          0x00000000        0x0 ..\obj\ocf_lpc134x_lib.o
+ .bss           0x00000000        0x0 ..\obj\ocf_lpc134x_lib.o
+ .text          0x00000000        0x0 ..\obj\system_LPC13xx.o
+ .bss           0x00000000        0x0 ..\obj\system_LPC13xx.o
+ .text          0x00000000        0x0 ..\obj\main.o
+ .data          0x00000000        0x0 ..\obj\main.o
+ .bss           0x00000000        0x0 ..\obj\main.o
+ .text          0x00000000        0x0 ..\obj\printf.o
+ .bss           0x00000000        0x0 ..\obj\printf.o
+ .text.snprintf
+                0x00000000       0x30 ..\obj\printf.o
+ .text.fprintf  0x00000000       0x2c ..\obj\printf.o
+ .text.sprintf  0x00000000       0x2c ..\obj\printf.o
+ .text.puts     0x00000000       0x24 ..\obj\printf.o
+ .text          0x00000000        0x0 ..\obj\startup_lpc13xx.o
+ .data          0x00000000        0x0 ..\obj\startup_lpc13xx.o
+ .bss           0x00000000        0x0 ..\obj\startup_lpc13xx.o
+ .data          0x00000000        0x0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubdf3.o)
+ .bss           0x00000000        0x0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubdf3.o)
+ .data          0x00000000        0x0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivdf3.o)
+ .bss           0x00000000        0x0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivdf3.o)
+ .data          0x00000000        0x0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixdfsi.o)
+ .bss           0x00000000        0x0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixdfsi.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x00000000         0x00008000         xr
+ram              0x10000000         0x00002000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x10002000                _eram = 0x10002000
+
+.text           0x00000000     0x15dc
+ *(.isr_vector)
+ .isr_vector    0x00000000      0x124 ..\obj\startup_lpc13xx.o
+                0x00000000                g_pfnVectors
+ *(.text*)
+ .text.initUART
+                0x00000124       0x70 ..\obj\ocf_lpc134x_lib.o
+                0x00000124                initUART
+ .text.initTimer0
+                0x00000194       0x3c ..\obj\ocf_lpc134x_lib.o
+                0x00000194                initTimer0
+ .text.delayMS  0x000001d0       0x34 ..\obj\ocf_lpc134x_lib.o
+                0x000001d0                delayMS
+ .text.uartWrite
+                0x00000204       0x2c ..\obj\ocf_lpc134x_lib.o
+                0x00000204                uartWrite
+ .text.SystemInit
+                0x00000230      0x37c ..\obj\system_LPC13xx.o
+                0x00000230                SystemInit
+ *fill*         0x000005ac        0x4 
+ .text.main     0x000005b0       0xb4 ..\obj\main.o
+                0x000005b0                main
+ .text.PrintChar
+                0x00000664       0x1c ..\obj\printf.o
+                0x00000664                PrintChar
+ .text.PutChar  0x00000680       0x20 ..\obj\printf.o
+                0x00000680                PutChar
+ .text.PutString
+                0x000006a0       0x3c ..\obj\printf.o
+                0x000006a0                PutString
+ .text.PutUnsignedInt
+                0x000006dc       0x9c ..\obj\printf.o
+                0x000006dc                PutUnsignedInt
+ .text.PutSignedInt
+                0x00000778       0xf8 ..\obj\printf.o
+                0x00000778                PutSignedInt
+ .text.PutHexa  0x00000870       0xd4 ..\obj\printf.o
+                0x00000870                PutHexa
+ .text.vsnprintf
+                0x00000944      0x254 ..\obj\printf.o
+                0x00000944                vsnprintf
+ .text.vsprintf
+                0x00000b98       0x24 ..\obj\printf.o
+                0x00000b98                vsprintf
+ .text.vfprintf
+                0x00000bbc       0x68 ..\obj\printf.o
+                0x00000bbc                vfprintf
+ .text.vprintf  0x00000c24       0x28 ..\obj\printf.o
+                0x00000c24                vprintf
+ .text.printf   0x00000c4c       0x28 ..\obj\printf.o
+                0x00000c4c                printf
+ .text.fputc    0x00000c74       0x40 ..\obj\printf.o
+                0x00000c74                fputc
+ .text.fputs    0x00000cb4       0x48 ..\obj\printf.o
+                0x00000cb4                fputs
+ .text.Default_Reset_Handler
+                0x00000cfc       0x60 ..\obj\startup_lpc13xx.o
+                0x00000cfc                Default_Reset_Handler
+                0x00000cfc                Reset_Handler
+ .text.Default_Handler
+                0x00000d5c        0x8 ..\obj\startup_lpc13xx.o
+                0x00000d5c                TIMER16_0_IRQHandler
+                0x00000d5c                DebugMon_Handler
+                0x00000d5c                HardFault_Handler
+                0x00000d5c                SysTick_Handler
+                0x00000d5c                PendSV_Handler
+                0x00000d5c                NMI_Handler
+                0x00000d5c                UART_IRQHandler
+                0x00000d5c                TIMER32_0_IRQHandler
+                0x00000d5c                TIMER32_1_IRQHandler
+                0x00000d5c                UsageFault_Handler
+                0x00000d5c                PIOINT1_IRQHandler
+                0x00000d5c                SSP_IRQHandler
+                0x00000d5c                TIMER16_1_IRQHandler
+                0x00000d5c                USB_FIQHandler
+                0x00000d5c                ADC_IRQHandler
+                0x00000d5c                PIOINT2_IRQHandler
+                0x00000d5c                USB_IRQHandler
+                0x00000d5c                BOD_IRQHandler
+                0x00000d5c                WAKEUP_IRQHandler
+                0x00000d5c                PIOINT0_IRQHandler
+                0x00000d5c                I2C_IRQHandler
+                0x00000d5c                MemManage_Handler
+                0x00000d5c                WDT_IRQHandler
+                0x00000d5c                SVC_Handler
+                0x00000d5c                PIOINT3_IRQHandler
+                0x00000d5c                BusFault_Handler
+                0x00000d5c                FMC_IRQHandler
+ .text          0x00000d64      0x370 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubdf3.o)
+                0x00000d64                __aeabi_drsub
+                0x00000d6c                __aeabi_dsub
+                0x00000d6c                __subdf3
+                0x00000d70                __aeabi_dadd
+                0x00000d70                __adddf3
+                0x00000fe8                __floatunsidf
+                0x00000fe8                __aeabi_ui2d
+                0x00001008                __floatsidf
+                0x00001008                __aeabi_i2d
+                0x0000102c                __aeabi_f2d
+                0x0000102c                __extendsfdf2
+                0x00001068                __floatundidf
+                0x00001068                __aeabi_ul2d
+                0x00001078                __floatdidf
+                0x00001078                __aeabi_l2d
+ .text          0x000010d4      0x424 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivdf3.o)
+                0x000010d4                __aeabi_dmul
+                0x000010d4                __muldf3
+                0x00001328                __divdf3
+                0x00001328                __aeabi_ddiv
+ .text          0x000014f8       0x50 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixdfsi.o)
+                0x000014f8                __aeabi_d2iz
+                0x000014f8                __fixdfsi
+ *(.init)
+ *(.fini)
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+ *(.rodata*)
+ .rodata        0x00001548       0x6d ..\obj\main.o
+ *fill*         0x000015b5        0x3 
+ .rodata        0x000015b8       0x24 ..\obj\printf.o
+ *(.eh_fram e*)
+
+.glue_7         0x000015dc        0x0
+ .glue_7        0x000015dc        0x0 linker stubs
+
+.glue_7t        0x000015dc        0x0
+ .glue_7t       0x000015dc        0x0 linker stubs
+
+.vfp11_veneer   0x000015dc        0x0
+ .vfp11_veneer  0x000015dc        0x0 linker stubs
+
+.v4_bx          0x000015dc        0x0
+ .v4_bx         0x000015dc        0x0 linker stubs
+
+.iplt           0x000015dc        0x0
+ .iplt          0x000015dc        0x0 ..\obj\ocf_lpc134x_lib.o
+
+.rel.dyn        0x000015dc        0x0
+ .rel.iplt      0x000015dc        0x0 ..\obj\ocf_lpc134x_lib.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x000015dc                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x000015dc                __exidx_end = .
+                0x000015dc                __etext = .
+                0x000015dc                _sidata = __etext
+
+.data           0x10000000      0x434 load address 0x000015dc
+                0x10000000                __data_start__ = .
+                0x10000000                _sdata = __data_start__
+ *(vtable)
+ *(.data*)
+ .data          0x10000000        0x4 ..\obj\system_LPC13xx.o
+                0x10000000                SystemFrequency
+ *fill*         0x10000004        0x4 
+ .data          0x10000008      0x42c ..\obj\printf.o
+                0x10000008                r
+                0x10000430                _impure_ptr
+                0x10000434                . = ALIGN (0x4)
+                [!provide]                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                [!provide]                PROVIDE (__preinit_array_end, .)
+                0x10000434                . = ALIGN (0x4)
+                [!provide]                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+                [!provide]                PROVIDE (__init_array_end, .)
+                0x10000434                . = ALIGN (0x4)
+                [!provide]                PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*))
+ *(.fini_array)
+                [!provide]                PROVIDE (__fini_array_end, .)
+ *(.jcr*)
+                0x10000434                . = ALIGN (0x4)
+                0x10000434                __data_end__ = .
+                0x10000434                _edata = __data_end__
+
+.igot.plt       0x10000434        0x0 load address 0x00001a10
+ .igot.plt      0x10000434        0x0 ..\obj\ocf_lpc134x_lib.o
+
+.bss            0x10000434        0x0
+                0x10000434                . = ALIGN (0x4)
+                0x10000434                __bss_start__ = .
+                0x10000434                _sbss = __bss_start__
+ *(.bss*)
+ *(COMMON)
+                0x10000434                . = ALIGN (0x4)
+                0x10000434                __bss_end__ = .
+                0x10000434                _ebss = __bss_end__
+
+.heap           0x10000434        0x0
+                0x10000434                __end__ = .
+                0x10000434                _end = __end__
+                0x10000434                end = __end__
+ *(.heap*)
+                0x10000434                __HeapLimit = .
+
+.co_stack       0x10000434      0x404 load address 0x00001a10
+                0x10000438                . = ALIGN (0x8)
+ *fill*         0x10000434        0x4 
+ *(.co_stack .co_stack.*)
+ .co_stack      0x10000438      0x400 ..\obj\startup_lpc13xx.o
+                0x10000438                pulStack
+                0x10002000                __StackTop = (ORIGIN (ram) + LENGTH (ram))
+                0x10001bfc                __StackLimit = (__StackTop - SIZEOF (.co_stack))
+                [!provide]                PROVIDE (__stack, __StackTop)
+                0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region ram  overflowed with stack)
+LOAD ..\obj\ocf_lpc134x_lib.o
+LOAD ..\obj\system_LPC13xx.o
+LOAD ..\obj\main.o
+LOAD ..\obj\printf.o
+LOAD ..\obj\startup_lpc13xx.o
+START GROUP
+LOAD y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a
+LOAD y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg.a
+LOAD y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libc.a
+END GROUP
+OUTPUT(LPC1343_ADC_Ex_1.elf elf32-littlearm)
+
+.debug_info     0x00000000     0x24e8
+ .debug_info    0x00000000      0x97e ..\obj\ocf_lpc134x_lib.o
+ .debug_info    0x0000097e      0x4a5 ..\obj\system_LPC13xx.o
+ .debug_info    0x00000e23      0x78e ..\obj\main.o
+ .debug_info    0x000015b1      0xe4a ..\obj\printf.o
+ .debug_info    0x000023fb       0xed ..\obj\startup_lpc13xx.o
+
+.debug_abbrev   0x00000000      0x647
+ .debug_abbrev  0x00000000      0x13c ..\obj\ocf_lpc134x_lib.o
+ .debug_abbrev  0x0000013c       0xda ..\obj\system_LPC13xx.o
+ .debug_abbrev  0x00000216      0x103 ..\obj\main.o
+ .debug_abbrev  0x00000319      0x287 ..\obj\printf.o
+ .debug_abbrev  0x000005a0       0xa7 ..\obj\startup_lpc13xx.o
+
+.debug_aranges  0x00000000      0x140
+ .debug_aranges
+                0x00000000       0x38 ..\obj\ocf_lpc134x_lib.o
+ .debug_aranges
+                0x00000038       0x20 ..\obj\system_LPC13xx.o
+ .debug_aranges
+                0x00000058       0x20 ..\obj\main.o
+ .debug_aranges
+                0x00000078       0xa0 ..\obj\printf.o
+ .debug_aranges
+                0x00000118       0x28 ..\obj\startup_lpc13xx.o
+
+.debug_ranges   0x00000000       0xf0
+ .debug_ranges  0x00000000       0x28 ..\obj\ocf_lpc134x_lib.o
+ .debug_ranges  0x00000028       0x10 ..\obj\system_LPC13xx.o
+ .debug_ranges  0x00000038       0x10 ..\obj\main.o
+ .debug_ranges  0x00000048       0x90 ..\obj\printf.o
+ .debug_ranges  0x000000d8       0x18 ..\obj\startup_lpc13xx.o
+
+.debug_line     0x00000000      0x999
+ .debug_line    0x00000000      0x1f8 ..\obj\ocf_lpc134x_lib.o
+ .debug_line    0x000001f8      0x206 ..\obj\system_LPC13xx.o
+ .debug_line    0x000003fe      0x1ae ..\obj\main.o
+ .debug_line    0x000005ac      0x344 ..\obj\printf.o
+ .debug_line    0x000008f0       0xa9 ..\obj\startup_lpc13xx.o
+
+.debug_str      0x00000000      0xcb4
+ .debug_str     0x00000000      0x65f ..\obj\ocf_lpc134x_lib.o
+                                0x6a9 (size before relaxing)
+ .debug_str     0x0000065f       0x70 ..\obj\system_LPC13xx.o
+                                0x46d (size before relaxing)
+ .debug_str     0x000006cf       0x53 ..\obj\main.o
+                                0x63d (size before relaxing)
+ .debug_str     0x00000722      0x4db ..\obj\printf.o
+                                0x692 (size before relaxing)
+ .debug_str     0x00000bfd       0xb7 ..\obj\startup_lpc13xx.o
+                                0x14e (size before relaxing)
+
+.comment        0x00000000       0x6e
+ .comment       0x00000000       0x6e ..\obj\ocf_lpc134x_lib.o
+                                 0x6f (size before relaxing)
+ .comment       0x0000006e       0x6f ..\obj\system_LPC13xx.o
+ .comment       0x0000006e       0x6f ..\obj\main.o
+ .comment       0x0000006e       0x6f ..\obj\printf.o
+ .comment       0x0000006e       0x6f ..\obj\startup_lpc13xx.o
+
+.ARM.attributes
+                0x00000000       0x33
+ .ARM.attributes
+                0x00000000       0x33 ..\obj\ocf_lpc134x_lib.o
+ .ARM.attributes
+                0x00000033       0x33 ..\obj\system_LPC13xx.o
+ .ARM.attributes
+                0x00000066       0x33 ..\obj\main.o
+ .ARM.attributes
+                0x00000099       0x33 ..\obj\printf.o
+ .ARM.attributes
+                0x000000cc       0x33 ..\obj\startup_lpc13xx.o
+ .ARM.attributes
+                0x000000ff       0x1d y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x0000011c       0x1d y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x00000139       0x1d y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixdfsi.o)
+
+.debug_frame    0x00000000      0x42c
+ .debug_frame   0x00000000       0xa0 ..\obj\ocf_lpc134x_lib.o
+ .debug_frame   0x000000a0       0x38 ..\obj\system_LPC13xx.o
+ .debug_frame   0x000000d8       0x30 ..\obj\main.o
+ .debug_frame   0x00000108      0x2d8 ..\obj\printf.o
+ .debug_frame   0x000003e0       0x4c ..\obj\startup_lpc13xx.o

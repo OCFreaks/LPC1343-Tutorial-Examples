@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dependencies>
+   <includePath signature="/IY:\LPC1343-Tutorial-Examples\CoIDE\ADC\Example_1 /IY:\LPC1343-Tutorial-Examples\CoIDE\ADC\Example_1\cmsis /IY:\LPC1343-Tutorial-Examples\CoIDE /IY:\LPC1343-Tutorial-Examples\CoIDE\ADC /IY:\LPC1343-Tutorial-Examples\CoIDE\ADC\Example_1\cmsis_boot">
+      <source file="..\..\..\stdio\printf.c" lastModified="15fc0887a58">
+         <include file="..\..\..\ocf_lpc134x_lib.h"/>
+      </source>
+      <source file="..\..\..\ocf_lpc134x_lib.c" lastModified="15fca16bf50">
+         <include file="..\..\..\cmsis_boot\LPC13xx.h"/>
+         <include file="..\..\..\ocf_lpc134x_lib.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\startup\startup_lpc13xx.c" lastModified="15fbee48b6a">
+      </source>
+      <source file="..\..\..\cmsis_boot\system_LPC13xx.c" lastModified="15fbee48f53">
+         <include file="..\..\..\cmsis_boot\LPC13xx.h"/>
+      </source>
+      <source file="..\..\..\cmsis\core_cmFunc.h" lastModified="15fbee49353">
+      </source>
+      <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="15fbee49354">
+      </source>
+      <source file="..\..\..\cmsis\core_cm3.h" lastModified="15fbee48f69">
+         <include file="..\..\..\cmsis\core_cmInstr.h"/>
+         <include file="..\..\..\cmsis\core_cmFunc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\LPC13xx.h" lastModified="15fbee48b69">
+         <include file="..\..\..\cmsis\core_cm3.h"/>
+         <include file="..\..\..\cmsis_boot\system_LPC13xx.h"/>
+      </source>
+      <source file="..\..\..\ocf_lpc134x_lib.h" lastModified="15fc07c8225">
+      </source>
+      <source file="..\..\..\cmsis_boot\system_LPC13xx.h" lastModified="15fbee48b6d">
+      </source>
+   </includePath>
+</dependencies>
