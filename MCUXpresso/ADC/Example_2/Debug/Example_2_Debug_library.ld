@@ -5,7 +5,7 @@
  * Generated linker script file for LPC1343
  * Created from library.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.23
- * MCUXpresso IDE v10.0.2 [Build 411] [2017-07-11]  on 18 Nov, 2017 4:31:25 PM
+ * MCUXpresso IDE v10.0.2 [Build 411] [2017-07-11]  on 5 Dec, 2017 12:41:29 AM
  */
 
 GROUP (

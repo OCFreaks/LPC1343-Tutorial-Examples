@@ -36,12 +36,14 @@ int main(void)
 
 	LPC_ADC->INTEN = SEL_AD0; //Enable AD0 Interrupt, set ADGINTEN to 0
 	NVIC_EnableIRQ(ADC_IRQn); //Enable ADC IRQ
+	float voltage = 0;
 
 	printf("OCFreaks.com LPC134x ADC Interrupt Tutorial Example.\n");
 	printf("BURST/Hardware-Controlled ADC Mode on AD0 Channel.\n");
 	while(1)
 	{
-		printf("AD0 = %dmV\n" , (int)( AD0Result*VREF ));
+		voltage = ((float)AD0Result * VREF) / 1024;
+		printf("AD0 = %dmV\n" , (int)(voltage*1000)); //Print millivolts
 		delayMS(500); //Slowing down Updates to 2 Updates per second
 	}
 	//return 0; //This won't execute

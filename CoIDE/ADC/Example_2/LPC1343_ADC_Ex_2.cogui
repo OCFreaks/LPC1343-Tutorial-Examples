@@ -33,9 +33,9 @@
 <input factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory">&#x0A;<subPage horizontalPosition="0" selectedItemId="240" subPageIndex="2" verticalPosition="0"/>
 </input>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="Y:/LPC1343-Tutorial-Examples/CoIDE/ADC/Example_2/main.c" title="main.c" tooltip="Y:/LPC1343-Tutorial-Examples/CoIDE/ADC/Example_2/main.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="Y:/GitHub/LPC1343-Tutorial-Examples/CoIDE/ADC/Example_2/main.c" title="main.c" tooltip="Y:/GitHub/LPC1343-Tutorial-Examples/CoIDE/ADC/Example_2/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LPC1343_ADC_Ex_2/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1233" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1980" selectionTopPixel="277"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="printf.c" partName="printf.c" path="Y:/LPC1343-Tutorial-Examples/CoIDE/ADC/Example_2/stdio/printf.c" title="printf.c" tooltip="Y:/LPC1343-Tutorial-Examples/CoIDE/ADC/Example_2/stdio/printf.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LPC1343_ADC_Ex_2/stdio/printf.c"/>

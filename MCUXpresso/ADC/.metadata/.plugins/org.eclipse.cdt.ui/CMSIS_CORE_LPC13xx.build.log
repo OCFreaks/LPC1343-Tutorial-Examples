@@ -1,6 +1,22 @@
-16:31:47 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC13xx ****
+00:41:29 **** Build of configuration Debug for project CMSIS_CORE_LPC13xx ****
 make -r all 
-make: Nothing to be done for `all'.
+Building file: ../src/system_LPC13xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSIS_CORE_LPC13xx -I"Y:\GitHub\LPC1343-Tutorial-Examples\MCUXpresso\ADC\CMSIS_CORE_LPC13xx\inc" -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC13xx.d" -MT"src/system_LPC13xx.o" -MT"src/system_LPC13xx.d" -o "src/system_LPC13xx.o" "../src/system_LPC13xx.c"
+Finished building: ../src/system_LPC13xx.c
+ 
+Building target: libCMSIS_CORE_LPC13xx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libCMSIS_CORE_LPC13xx.a"  ./src/system_LPC13xx.o   
+c:\NXP\MCUXpressoIDE_10.0.2_411\ide\tools\bin\arm-none-eabi-ar.exe: creating libCMSIS_CORE_LPC13xx.a
+Finished building target: libCMSIS_CORE_LPC13xx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "libCMSIS_CORE_LPC13xx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC13xx.a" >"libCMSIS_CORE_LPC13xx.lss"
+   text	   data	    bss	    dec	    hex	filename
+    404	      4	      0	    408	    198	system_LPC13xx.o (ex libCMSIS_CORE_LPC13xx.a)
+ 
 
-16:31:47 Build Finished (took 146ms)
+00:41:29 Build Finished (took 330ms)
 

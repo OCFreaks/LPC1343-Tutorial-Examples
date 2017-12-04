@@ -1,11 +1,17 @@
 Archive member included to satisfy reference by file (symbol)
 
 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubdf3.o)
-                              ..\obj\main.o (__aeabi_i2d)
+                              ..\obj\main.o (__aeabi_f2d)
 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivdf3.o)
                               ..\obj\main.o (__aeabi_dmul)
-y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixdfsi.o)
-                              ..\obj\main.o (__aeabi_d2iz)
+y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_truncdfsf2.o)
+                              ..\obj\main.o (__aeabi_d2f)
+y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubsf3.o)
+                              ..\obj\main.o (__aeabi_i2f)
+y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivsf3.o)
+                              ..\obj\main.o (__aeabi_fmul)
+y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixsfsi.o)
+                              ..\obj\main.o (__aeabi_f2iz)
 
 Discarded input sections
 
@@ -30,8 +36,14 @@ Discarded input sections
  .bss           0x00000000        0x0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubdf3.o)
  .data          0x00000000        0x0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivdf3.o)
  .bss           0x00000000        0x0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivdf3.o)
- .data          0x00000000        0x0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixdfsi.o)
- .bss           0x00000000        0x0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixdfsi.o)
+ .data          0x00000000        0x0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_truncdfsf2.o)
+ .bss           0x00000000        0x0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_truncdfsf2.o)
+ .data          0x00000000        0x0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubsf3.o)
+ .bss           0x00000000        0x0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubsf3.o)
+ .data          0x00000000        0x0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivsf3.o)
+ .bss           0x00000000        0x0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivsf3.o)
+ .data          0x00000000        0x0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixsfsi.o)
+ .bss           0x00000000        0x0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixsfsi.o)
 
 Memory Configuration
 
@@ -44,7 +56,7 @@ Linker script and memory map
 
                 0x10002000                _eram = 0x10002000
 
-.text           0x00000000     0x1660
+.text           0x00000000     0x1bf8
  *(.isr_vector)
  .isr_vector    0x00000000      0x124 ..\obj\startup_lpc13xx.o
                 0x00000000                g_pfnVectors
@@ -66,100 +78,122 @@ Linker script and memory map
  .text.NVIC_EnableIRQ
                 0x000005ac       0x30 ..\obj\main.o
  *fill*         0x000005dc        0x4 
- .text.main     0x000005e0       0xb0 ..\obj\main.o
+ .text.main     0x000005e0       0xf0 ..\obj\main.o
                 0x000005e0                main
  .text.ADC_IRQHandler
-                0x00000690       0x48 ..\obj\main.o
-                0x00000690                ADC_IRQHandler
+                0x000006d0       0x48 ..\obj\main.o
+                0x000006d0                ADC_IRQHandler
  .text.PrintChar
-                0x000006d8       0x1c ..\obj\printf.o
-                0x000006d8                PrintChar
- .text.PutChar  0x000006f4       0x20 ..\obj\printf.o
-                0x000006f4                PutChar
+                0x00000718       0x1c ..\obj\printf.o
+                0x00000718                PrintChar
+ .text.PutChar  0x00000734       0x20 ..\obj\printf.o
+                0x00000734                PutChar
  .text.PutString
-                0x00000714       0x3c ..\obj\printf.o
-                0x00000714                PutString
+                0x00000754       0x3c ..\obj\printf.o
+                0x00000754                PutString
  .text.PutUnsignedInt
-                0x00000750       0x9c ..\obj\printf.o
-                0x00000750                PutUnsignedInt
+                0x00000790       0x9c ..\obj\printf.o
+                0x00000790                PutUnsignedInt
  .text.PutSignedInt
-                0x000007ec       0xf8 ..\obj\printf.o
-                0x000007ec                PutSignedInt
- .text.PutHexa  0x000008e4       0xd4 ..\obj\printf.o
-                0x000008e4                PutHexa
+                0x0000082c       0xf8 ..\obj\printf.o
+                0x0000082c                PutSignedInt
+ .text.PutHexa  0x00000924       0xd4 ..\obj\printf.o
+                0x00000924                PutHexa
  .text.vsnprintf
-                0x000009b8      0x254 ..\obj\printf.o
-                0x000009b8                vsnprintf
+                0x000009f8      0x254 ..\obj\printf.o
+                0x000009f8                vsnprintf
  .text.vsprintf
-                0x00000c0c       0x24 ..\obj\printf.o
-                0x00000c0c                vsprintf
+                0x00000c4c       0x24 ..\obj\printf.o
+                0x00000c4c                vsprintf
  .text.vfprintf
-                0x00000c30       0x68 ..\obj\printf.o
-                0x00000c30                vfprintf
- .text.vprintf  0x00000c98       0x28 ..\obj\printf.o
-                0x00000c98                vprintf
- .text.printf   0x00000cc0       0x28 ..\obj\printf.o
-                0x00000cc0                printf
- .text.fputc    0x00000ce8       0x40 ..\obj\printf.o
-                0x00000ce8                fputc
- .text.fputs    0x00000d28       0x48 ..\obj\printf.o
-                0x00000d28                fputs
+                0x00000c70       0x68 ..\obj\printf.o
+                0x00000c70                vfprintf
+ .text.vprintf  0x00000cd8       0x28 ..\obj\printf.o
+                0x00000cd8                vprintf
+ .text.printf   0x00000d00       0x28 ..\obj\printf.o
+                0x00000d00                printf
+ .text.fputc    0x00000d28       0x40 ..\obj\printf.o
+                0x00000d28                fputc
+ .text.fputs    0x00000d68       0x48 ..\obj\printf.o
+                0x00000d68                fputs
  .text.Default_Reset_Handler
-                0x00000d70       0x60 ..\obj\startup_lpc13xx.o
-                0x00000d70                Default_Reset_Handler
-                0x00000d70                Reset_Handler
+                0x00000db0       0x60 ..\obj\startup_lpc13xx.o
+                0x00000db0                Default_Reset_Handler
+                0x00000db0                Reset_Handler
  .text.Default_Handler
-                0x00000dd0        0x8 ..\obj\startup_lpc13xx.o
-                0x00000dd0                TIMER16_0_IRQHandler
-                0x00000dd0                DebugMon_Handler
-                0x00000dd0                HardFault_Handler
-                0x00000dd0                SysTick_Handler
-                0x00000dd0                PendSV_Handler
-                0x00000dd0                NMI_Handler
-                0x00000dd0                UART_IRQHandler
-                0x00000dd0                TIMER32_0_IRQHandler
-                0x00000dd0                TIMER32_1_IRQHandler
-                0x00000dd0                UsageFault_Handler
-                0x00000dd0                PIOINT1_IRQHandler
-                0x00000dd0                SSP_IRQHandler
-                0x00000dd0                TIMER16_1_IRQHandler
-                0x00000dd0                USB_FIQHandler
-                0x00000dd0                PIOINT2_IRQHandler
-                0x00000dd0                USB_IRQHandler
-                0x00000dd0                BOD_IRQHandler
-                0x00000dd0                WAKEUP_IRQHandler
-                0x00000dd0                PIOINT0_IRQHandler
-                0x00000dd0                I2C_IRQHandler
-                0x00000dd0                MemManage_Handler
-                0x00000dd0                WDT_IRQHandler
-                0x00000dd0                SVC_Handler
-                0x00000dd0                PIOINT3_IRQHandler
-                0x00000dd0                BusFault_Handler
-                0x00000dd0                FMC_IRQHandler
- .text          0x00000dd8      0x370 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubdf3.o)
-                0x00000dd8                __aeabi_drsub
-                0x00000de0                __aeabi_dsub
-                0x00000de0                __subdf3
-                0x00000de4                __aeabi_dadd
-                0x00000de4                __adddf3
-                0x0000105c                __floatunsidf
-                0x0000105c                __aeabi_ui2d
-                0x0000107c                __floatsidf
-                0x0000107c                __aeabi_i2d
-                0x000010a0                __aeabi_f2d
-                0x000010a0                __extendsfdf2
-                0x000010dc                __floatundidf
-                0x000010dc                __aeabi_ul2d
-                0x000010ec                __floatdidf
-                0x000010ec                __aeabi_l2d
- .text          0x00001148      0x424 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivdf3.o)
-                0x00001148                __aeabi_dmul
-                0x00001148                __muldf3
-                0x0000139c                __divdf3
-                0x0000139c                __aeabi_ddiv
- .text          0x0000156c       0x50 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixdfsi.o)
-                0x0000156c                __aeabi_d2iz
-                0x0000156c                __fixdfsi
+                0x00000e10        0x8 ..\obj\startup_lpc13xx.o
+                0x00000e10                TIMER16_0_IRQHandler
+                0x00000e10                DebugMon_Handler
+                0x00000e10                HardFault_Handler
+                0x00000e10                SysTick_Handler
+                0x00000e10                PendSV_Handler
+                0x00000e10                NMI_Handler
+                0x00000e10                UART_IRQHandler
+                0x00000e10                TIMER32_0_IRQHandler
+                0x00000e10                TIMER32_1_IRQHandler
+                0x00000e10                UsageFault_Handler
+                0x00000e10                PIOINT1_IRQHandler
+                0x00000e10                SSP_IRQHandler
+                0x00000e10                TIMER16_1_IRQHandler
+                0x00000e10                USB_FIQHandler
+                0x00000e10                PIOINT2_IRQHandler
+                0x00000e10                USB_IRQHandler
+                0x00000e10                BOD_IRQHandler
+                0x00000e10                WAKEUP_IRQHandler
+                0x00000e10                PIOINT0_IRQHandler
+                0x00000e10                I2C_IRQHandler
+                0x00000e10                MemManage_Handler
+                0x00000e10                WDT_IRQHandler
+                0x00000e10                SVC_Handler
+                0x00000e10                PIOINT3_IRQHandler
+                0x00000e10                BusFault_Handler
+                0x00000e10                FMC_IRQHandler
+ .text          0x00000e18      0x370 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubdf3.o)
+                0x00000e18                __aeabi_drsub
+                0x00000e20                __aeabi_dsub
+                0x00000e20                __subdf3
+                0x00000e24                __aeabi_dadd
+                0x00000e24                __adddf3
+                0x0000109c                __floatunsidf
+                0x0000109c                __aeabi_ui2d
+                0x000010bc                __floatsidf
+                0x000010bc                __aeabi_i2d
+                0x000010e0                __aeabi_f2d
+                0x000010e0                __extendsfdf2
+                0x0000111c                __floatundidf
+                0x0000111c                __aeabi_ul2d
+                0x0000112c                __floatdidf
+                0x0000112c                __aeabi_l2d
+ .text          0x00001188      0x424 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivdf3.o)
+                0x00001188                __aeabi_dmul
+                0x00001188                __muldf3
+                0x000013dc                __divdf3
+                0x000013dc                __aeabi_ddiv
+ .text          0x000015ac       0xa0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_truncdfsf2.o)
+                0x000015ac                __truncdfsf2
+                0x000015ac                __aeabi_d2f
+ .text          0x0000164c      0x21c y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubsf3.o)
+                0x0000164c                __aeabi_frsub
+                0x00001654                __subsf3
+                0x00001654                __aeabi_fsub
+                0x00001658                __aeabi_fadd
+                0x00001658                __addsf3
+                0x000017b8                __aeabi_ui2f
+                0x000017b8                __floatunsisf
+                0x000017c0                __aeabi_i2f
+                0x000017c0                __floatsisf
+                0x000017dc                __aeabi_ul2f
+                0x000017dc                __floatundisf
+                0x000017ec                __aeabi_l2f
+                0x000017ec                __floatdisf
+ .text          0x00001868      0x2a0 y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivsf3.o)
+                0x00001868                __mulsf3
+                0x00001868                __aeabi_fmul
+                0x000019d0                __aeabi_fdiv
+                0x000019d0                __divsf3
+ .text          0x00001b08       0x4c y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixsfsi.o)
+                0x00001b08                __aeabi_f2iz
+                0x00001b08                __fixsfsi
  *(.init)
  *(.fini)
  *crtbegin.o(.ctors)
@@ -173,40 +207,40 @@ Linker script and memory map
  *(SORT(.dtors.*))
  *(.dtors)
  *(.rodata*)
- .rodata        0x000015bc       0x7d ..\obj\main.o
- *fill*         0x00001639        0x3 
- .rodata        0x0000163c       0x24 ..\obj\printf.o
+ .rodata        0x00001b54       0x7d ..\obj\main.o
+ *fill*         0x00001bd1        0x3 
+ .rodata        0x00001bd4       0x24 ..\obj\printf.o
  *(.eh_fram e*)
 
-.glue_7         0x00001660        0x0
- .glue_7        0x00001660        0x0 linker stubs
+.glue_7         0x00001bf8        0x0
+ .glue_7        0x00001bf8        0x0 linker stubs
 
-.glue_7t        0x00001660        0x0
- .glue_7t       0x00001660        0x0 linker stubs
+.glue_7t        0x00001bf8        0x0
+ .glue_7t       0x00001bf8        0x0 linker stubs
 
-.vfp11_veneer   0x00001660        0x0
- .vfp11_veneer  0x00001660        0x0 linker stubs
+.vfp11_veneer   0x00001bf8        0x0
+ .vfp11_veneer  0x00001bf8        0x0 linker stubs
 
-.v4_bx          0x00001660        0x0
- .v4_bx         0x00001660        0x0 linker stubs
+.v4_bx          0x00001bf8        0x0
+ .v4_bx         0x00001bf8        0x0 linker stubs
 
-.iplt           0x00001660        0x0
- .iplt          0x00001660        0x0 ..\obj\ocf_lpc134x_lib.o
+.iplt           0x00001bf8        0x0
+ .iplt          0x00001bf8        0x0 ..\obj\ocf_lpc134x_lib.o
 
-.rel.dyn        0x00001660        0x0
- .rel.iplt      0x00001660        0x0 ..\obj\ocf_lpc134x_lib.o
+.rel.dyn        0x00001bf8        0x0
+ .rel.iplt      0x00001bf8        0x0 ..\obj\ocf_lpc134x_lib.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00001660                __exidx_start = .
+                0x00001bf8                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00001660                __exidx_end = .
-                0x00001660                __etext = .
-                0x00001660                _sidata = __etext
+                0x00001bf8                __exidx_end = .
+                0x00001bf8                __etext = .
+                0x00001bf8                _sidata = __etext
 
-.data           0x10000000      0x434 load address 0x00001660
+.data           0x10000000      0x434 load address 0x00001bf8
                 0x10000000                __data_start__ = .
                 0x10000000                _sdata = __data_start__
  *(vtable)
@@ -236,10 +270,10 @@ Linker script and memory map
                 0x10000434                __data_end__ = .
                 0x10000434                _edata = __data_end__
 
-.igot.plt       0x10000434        0x0 load address 0x00001a94
+.igot.plt       0x10000434        0x0 load address 0x0000202c
  .igot.plt      0x10000434        0x0 ..\obj\ocf_lpc134x_lib.o
 
-.bss            0x10000434        0x4 load address 0x00001a94
+.bss            0x10000434        0x4 load address 0x0000202c
                 0x10000434                . = ALIGN (0x4)
                 0x10000434                __bss_start__ = .
                 0x10000434                _sbss = __bss_start__
@@ -258,7 +292,7 @@ Linker script and memory map
  *(.heap*)
                 0x10000438                __HeapLimit = .
 
-.co_stack       0x10000438      0x400 load address 0x00001a98
+.co_stack       0x10000438      0x400 load address 0x00002030
                 0x10000438                . = ALIGN (0x8)
  *(.co_stack .co_stack.*)
  .co_stack      0x10000438      0x400 ..\obj\startup_lpc13xx.o
@@ -279,19 +313,19 @@ LOAD y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/../
 END GROUP
 OUTPUT(LPC1343_ADC_Ex_2.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x283a
+.debug_info     0x00000000     0x2854
  .debug_info    0x00000000      0x97e ..\obj\ocf_lpc134x_lib.o
  .debug_info    0x0000097e      0x4a5 ..\obj\system_LPC13xx.o
- .debug_info    0x00000e23      0xae0 ..\obj\main.o
- .debug_info    0x00001903      0xe4a ..\obj\printf.o
- .debug_info    0x0000274d       0xed ..\obj\startup_lpc13xx.o
+ .debug_info    0x00000e23      0xafa ..\obj\main.o
+ .debug_info    0x0000191d      0xe4a ..\obj\printf.o
+ .debug_info    0x00002767       0xed ..\obj\startup_lpc13xx.o
 
-.debug_abbrev   0x00000000      0x6ee
+.debug_abbrev   0x00000000      0x6f0
  .debug_abbrev  0x00000000      0x13c ..\obj\ocf_lpc134x_lib.o
  .debug_abbrev  0x0000013c       0xda ..\obj\system_LPC13xx.o
- .debug_abbrev  0x00000216      0x1aa ..\obj\main.o
- .debug_abbrev  0x000003c0      0x287 ..\obj\printf.o
- .debug_abbrev  0x00000647       0xa7 ..\obj\startup_lpc13xx.o
+ .debug_abbrev  0x00000216      0x1ac ..\obj\main.o
+ .debug_abbrev  0x000003c2      0x287 ..\obj\printf.o
+ .debug_abbrev  0x00000649       0xa7 ..\obj\startup_lpc13xx.o
 
 .debug_aranges  0x00000000      0x150
  .debug_aranges
@@ -312,24 +346,24 @@ OUTPUT(LPC1343_ADC_Ex_2.elf elf32-littlearm)
  .debug_ranges  0x00000058       0x90 ..\obj\printf.o
  .debug_ranges  0x000000e8       0x18 ..\obj\startup_lpc13xx.o
 
-.debug_line     0x00000000      0x9c9
- .debug_line    0x00000000      0x1f8 ..\obj\ocf_lpc134x_lib.o
- .debug_line    0x000001f8      0x206 ..\obj\system_LPC13xx.o
- .debug_line    0x000003fe      0x1de ..\obj\main.o
- .debug_line    0x000005dc      0x344 ..\obj\printf.o
- .debug_line    0x00000920       0xa9 ..\obj\startup_lpc13xx.o
+.debug_line     0x00000000      0xa15
+ .debug_line    0x00000000      0x20d ..\obj\ocf_lpc134x_lib.o
+ .debug_line    0x0000020d      0x214 ..\obj\system_LPC13xx.o
+ .debug_line    0x00000421      0x1f9 ..\obj\main.o
+ .debug_line    0x0000061a      0x34b ..\obj\printf.o
+ .debug_line    0x00000965       0xb0 ..\obj\startup_lpc13xx.o
 
-.debug_str      0x00000000     0x109e
- .debug_str     0x00000000      0x65f ..\obj\ocf_lpc134x_lib.o
-                                0x6a9 (size before relaxing)
- .debug_str     0x0000065f       0x70 ..\obj\system_LPC13xx.o
-                                0x46d (size before relaxing)
- .debug_str     0x000006cf      0x43d ..\obj\main.o
-                                0xa2d (size before relaxing)
- .debug_str     0x00000b0c      0x4db ..\obj\printf.o
-                                0x692 (size before relaxing)
- .debug_str     0x00000fe7       0xb7 ..\obj\startup_lpc13xx.o
-                                0x14e (size before relaxing)
+.debug_str      0x00000000     0x10d6
+ .debug_str     0x00000000      0x66d ..\obj\ocf_lpc134x_lib.o
+                                0x6b7 (size before relaxing)
+ .debug_str     0x0000066d       0x77 ..\obj\system_LPC13xx.o
+                                0x474 (size before relaxing)
+ .debug_str     0x000006e4      0x452 ..\obj\main.o
+                                0xa49 (size before relaxing)
+ .debug_str     0x00000b36      0x4e2 ..\obj\printf.o
+                                0x6a0 (size before relaxing)
+ .debug_str     0x00001018       0xbe ..\obj\startup_lpc13xx.o
+                                0x155 (size before relaxing)
 
 .comment        0x00000000       0x6e
  .comment       0x00000000       0x6e ..\obj\ocf_lpc134x_lib.o
@@ -356,7 +390,13 @@ OUTPUT(LPC1343_ADC_Ex_2.elf elf32-littlearm)
  .ARM.attributes
                 0x0000011c       0x1d y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivdf3.o)
  .ARM.attributes
-                0x00000139       0x1d y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixdfsi.o)
+                0x00000139       0x1d y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_truncdfsf2.o)
+ .ARM.attributes
+                0x00000156       0x1d y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubsf3.o)
+ .ARM.attributes
+                0x00000173       0x1d y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivsf3.o)
+ .ARM.attributes
+                0x00000190       0x1d y:/gnu tools arm embedded/5.4 2016q3/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixsfsi.o)
 
 .debug_frame    0x00000000      0x47c
  .debug_frame   0x00000000       0xa0 ..\obj\ocf_lpc134x_lib.o

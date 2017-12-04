@@ -24,7 +24,7 @@ int main(void)
 {
 	//SystemInit(); //Gets called by Startup code, sets CCLK=100Mhz, PCLK=25Mhz
 	initUART(); //Initialize UART for printf()
-	initTimer0(); //For delayMS(
+	initTimer0(); //For delayMS()
 
 	LPC_SYSCON->PDRUNCFG &= ADC_PWRUP; //Power-up ADC Block
 	LPC_SYSCON->SYSAHBCLKCTRL |= ADC_CLK_EN; //Enable ADC clock
@@ -35,14 +35,16 @@ int main(void)
 	LPC_IOCON->JTAG_TDI_PIO0_11 = 0x2; //comment this if NOT using CoIDE.
 
 	unsigned int result = 0;
+	float voltage = 0;
 
-	printf("OCFreaks.com LPC134x ADC Tutorial Example 1.\r\nSoftware Controlled ADC Mode on AD0 Channel.\n\r");
+	printf("OCFreaks.com LPC134x ADC Tutorial Example 1.\n\rSoftware Controlled ADC Mode on AD0 Channel.\n\r");
 	while(1)
 	{
 		LPC_ADC->CR |= START_CNV; //Start new Conversion
 		while((LPC_ADC->DR0 & ADC_DONE) == 0); //Wait until conversion is finished
-		result = (LPC_ADC->DR0>>6) & 0x3FF; //12 bit Mask to extract result
-		printf("AD0 = %dmV\n\r" , (int)( result*VREF ));
+		result = (LPC_ADC->DR0>>6) & 0x3FF; //10 bit Mask to extract result
+		voltage = ((float)result * VREF) / 1024;
+		printf("AD0 = %dmV\n\r" , (int)(voltage*1000)); //Print millivolts
 		delayMS(500); //Slowing down Updates to 2 Updates per second
 	}
 	//return 0; //This won't execute

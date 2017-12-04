@@ -25,13 +25,14 @@ int main(void)
 
 	LPC_SYSCON->PDRUNCFG &= ADC_PWRUP; //Power-up ADC Block
 	LPC_SYSCON->SYSAHBCLKCTRL |= ADC_CLK_EN; //Enable ADC clock
-	LPC_ADC->CR =  ADCR_SETUP_SCM | SEL_AD0; //Setup ADC Block
+	LPC_ADC->CR = ADCR_SETUP_SCM | SEL_AD0; //Setup ADC Block
 
 	/* Now select AD0 function and set ADMODE=0 for PIO0_11(P0.11) */
 	LPC_IOCON->R_PIO0_11 = 0x2; //Use this for KEIL and LPCXpresso/MCUXpresso - check tutorial for more
 	//LPC_IOCON->JTAG_TDI_PIO0_11 = 0x2; //Older version of CMSIS uses this. Uncomment this for CoIDE.
 
 	unsigned int result = 0;
+	float voltage = 0;
 
 	printf("OCFreaks.com LPC134x ADC Tutorial Example 1.\nSoftware Controlled ADC Mode on AD0 Channel.\n");
 	while(1)
@@ -39,9 +40,9 @@ int main(void)
 		LPC_ADC->CR |= START_CNV; //Start new Conversion
 		while((LPC_ADC->DR0 & ADC_DONE) == 0); //Wait until conversion is finished
 		result = (LPC_ADC->DR0>>6) & 0x3FF; //10 bit Mask to extract result
-		printf("AD0 = %dmV\n" , (int)( result*VREF ));
+		voltage = ((float)result * VREF) / 1024;
+		printf("AD0 = %dmV\n" , (int)(voltage*1000)); //Print millivolts
 		delayMS(500); //Slowing down Updates to 2 Updates per second
 	}
-
 	//return 0; //This won't execute
 }

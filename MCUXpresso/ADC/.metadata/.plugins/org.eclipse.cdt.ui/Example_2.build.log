@@ -1,15 +1,30 @@
-16:31:25 **** Incremental Build of configuration Debug for project Example_2 ****
+00:41:29 **** Build of configuration Debug for project Example_2 ****
 make -r -j4 all 
 Building file: ../src/Example_2.c
+Building file: ../src/cr_startup_lpc13xx.c
+Building file: ../src/ocf_lpc134x_lib.c
+Building file: ../src/crp.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC13xx -D__LPC13XX__ -D__REDLIB__ -I"Y:\LPC1343-Tutorial-Examples\MCUXpresso\ADC\CMSIS_CORE_LPC13xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Example_2.d" -MT"src/Example_2.o" -MT"src/Example_2.d" -o "src/Example_2.o" "../src/Example_2.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC13xx -D__LPC13XX__ -D__REDLIB__ -I"Y:\GitHub\LPC1343-Tutorial-Examples\MCUXpresso\ADC\CMSIS_CORE_LPC13xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/Example_2.d" -MT"src/Example_2.o" -MT"src/Example_2.d" -o "src/Example_2.o" "../src/Example_2.c"
+Invoking: MCU C Compiler
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC13xx -D__LPC13XX__ -D__REDLIB__ -I"Y:\GitHub\LPC1343-Tutorial-Examples\MCUXpresso\ADC\CMSIS_CORE_LPC13xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC13xx -D__LPC13XX__ -D__REDLIB__ -I"Y:\GitHub\LPC1343-Tutorial-Examples\MCUXpresso\ADC\CMSIS_CORE_LPC13xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc13xx.d" -MT"src/cr_startup_lpc13xx.o" -MT"src/cr_startup_lpc13xx.d" -o "src/cr_startup_lpc13xx.o" "../src/cr_startup_lpc13xx.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC13xx -D__LPC13XX__ -D__REDLIB__ -I"Y:\GitHub\LPC1343-Tutorial-Examples\MCUXpresso\ADC\CMSIS_CORE_LPC13xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/ocf_lpc134x_lib.d" -MT"src/ocf_lpc134x_lib.o" -MT"src/ocf_lpc134x_lib.d" -o "src/ocf_lpc134x_lib.o" "../src/ocf_lpc134x_lib.c"
+Finished building: ../src/crp.c
+Finished building: ../src/cr_startup_lpc13xx.c
+ 
+ 
 Finished building: ../src/Example_2.c
+Finished building: ../src/ocf_lpc134x_lib.c
+ 
  
 Building target: Example_2.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\ADC\CMSIS_CORE_LPC13xx\Debug" -Xlinker -Map="Example_2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Example_2_Debug.ld" -o "Example_2.axf"  ./src/Example_2.o ./src/cr_startup_lpc13xx.o ./src/crp.o ./src/ocf_lpc134x_lib.o   -lCMSIS_CORE_LPC13xx
+arm-none-eabi-gcc -nostdlib -L"Y:\GitHub\LPC1343-Tutorial-Examples\MCUXpresso\ADC\CMSIS_CORE_LPC13xx\Debug" -Xlinker -Map="Example_2.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Example_2_Debug.ld" -o "Example_2.axf"  ./src/Example_2.o ./src/cr_startup_lpc13xx.o ./src/crp.o ./src/ocf_lpc134x_lib.o   -lCMSIS_CORE_LPC13xx
 Memory region         Used Size  Region Size  %age Used
-        MFlash32:       11836 B        32 KB     36.12%
+        MFlash32:       12324 B        32 KB     37.61%
          RamLoc8:         496 B         8 KB      6.05%
 Finished building target: Example_2.axf
  
@@ -17,11 +32,11 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "Example_2.axf" ; arm-none-eabi-objcopy -v -O binary "Example_2.axf" "Example_2.bin" ; checksum -p LPC1343 -d "Example_2.bin"
    text	   data	    bss	    dec	    hex	filename
-  11836	      0	    496	  12332	   302c	Example_2.axf
+  12324	      0	    496	  12820	   3214	Example_2.axf
 copy from `Example_2.axf' [elf32-littlearm] to `Example_2.bin' [binary]
 Written checksum 0xefffd2b2 at offset 0x1c in file Example_2.bin
 Previous value 0xefffd2b2 at offset 0x1c in file Example_2.bin
  
 
-16:31:26 Build Finished (took 854ms)
+00:41:30 Build Finished (took 477ms)
 

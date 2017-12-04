@@ -29,7 +29,7 @@ all: Example_1.axf
 Example_1.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"Y:\LPC1343-Tutorial-Examples\MCUXpresso\ADC\CMSIS_CORE_LPC13xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"Y:\GitHub\LPC1343-Tutorial-Examples\MCUXpresso\ADC\CMSIS_CORE_LPC13xx\Debug" -Xlinker -Map="Example_1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "Example_1_Debug.ld" -o "Example_1.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
