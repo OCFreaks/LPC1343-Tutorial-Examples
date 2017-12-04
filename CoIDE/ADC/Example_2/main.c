@@ -31,7 +31,7 @@ int main(void)
 
 	LPC_SYSCON->PDRUNCFG &= ADC_PWRUP; //Power-up ADC Block
 	LPC_SYSCON->SYSAHBCLKCTRL |= ADC_CLK_EN; //Enable ADC clock
-	LPC_ADC->CR =  ADCR_SETUP_BURST | SEL_AD0; //Setup ADC Block
+	LPC_ADC->CR = ADCR_SETUP_BURST | SEL_AD0; //Setup ADC Block
 
 	/* Now select AD0 function and set ADMODE=0 PIO0_11(P0.11) */
 	//LPC_IOCON->R_PIO0_11 = 0x2; //Uncomment this if NOT using CoIDE, see tutorial for more.
